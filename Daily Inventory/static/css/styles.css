@@ -1,0 +1,221 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and main body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fb; /* Light background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Label Styling */
+label{
+    font-size: 1.3rem;
+    color: #3a8d99;
+}
+
+/* Centering the container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 2rem;
+    color: #3a8d99;
+    margin-bottom: 20px;
+}
+
+/* File input field styling */
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for input */
+input[type="file"]:hover, input[type="file"]:focus {
+    border-color: #3a8d99;
+    background-color: #f1f1f1;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #3a8d99;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2a6f78;
+    transform: scale(1.05);  /* Slightly grow the button */
+}
+
+button:active {
+    background-color: #245c68;
+}
+
+/* Spinner Styling */
+.spinner {
+    border: 8px solid #f3f3f3; /* Light gray */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Message Styling */
+.success-message {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #3a8d99;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    border-top: 2px solid #2a6f78;
+}
+
+/* Header Styling */
+header {
+    background-color: #3a8d99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #2a6f78;
+}
+
+/* Media Queries */
+
+/* For Small Devices (Mobile phones, 320px to 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    header {
+        font-size: 1.5rem; /* Smaller header text */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Slightly smaller heading */
+    }
+
+    input[type="file"], button {
+        padding: 12px; /* Adjust padding for mobile */
+    }
+}
+
+/* For Medium Devices (Tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    header {
+        font-size: 1.7rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="file"], button {
+        padding: 14px;
+    }
+}
+
+/* For Large Devices (Desktop, 769px and above) */
+@media (min-width: 769px) {
+    .container {
+        max-width: 500px; /* Keep the container width fixed */
+        padding: 40px 30px;
+    }
+
+    header {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    input[type="file"], button {
+        padding: 15px;
+    }
+}
