@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Generator By Muhamad Arhum</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo-ar.png') }}">
-
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    
 </head>
+
 <body>
     <div class="header">
-        <img src="{{ url_for('static', filename='logo-ar.png') }}" alt="Logo" style="height: 160px; margin-left: 200px; margin-top: -90px;">
-
-    <header style="text-align: center; margin-top: 10px; margin-left: 60px;">
-    <h1>File Generator</h1>
-</header>
-    </div>   
+        <img src="{{ url_for('static', filename='logo-ar.png') }}" alt="Logo"
+            style="height: 160px; margin-left: 200px; margin-top: -90px;">
+        <header style="text-align: center; margin-top: 10px;">
+            <h1>File Generator</h1>
+        </header>
+    </div>
 
     <div class="container">
         <div class="card">
             <h2>Upload Your Reports</h2>
+            <p style="font-size: 1rem; color: #333; text-align: center;">Please upload the necessary PDF files for the sales
+                reports (Food Court, Restaurant, Delivery) and the Excel file for stock data.</p>
             <form action="/upload" method="POST" enctype="multipart/form-data" id="upload-form">
                 <div class="form-group">
-                    <label for="food_court_file">Food Court Sale Report:</label>
+                    <label for="food_court_file">Food Court Sale Report (PDF):</label>
                     <input type="file" name="food_court_file" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="restaurant_file">Restaurant Sale Report:</label>
+                    <label for="restaurant_file">Restaurant Sale Report (PDF):</label>
                     <input type="file" name="restaurant_file" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="delivery_file">Delivery Sale Report:</label>
+                    <label for="delivery_file">Delivery Sale Report (PDF):</label>
                     <input type="file" name="delivery_file" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="stock_file">Stock Report (Excel):</label>
+                    <input type="file" name="stock_file" required>
                 </div>
 
                 <button type="submit" id="submit-btn">Generate Report</button>
@@ -43,7 +49,7 @@
                 <!-- Spinner -->
                 <div id="loading-spinner" class="spinner" style="display: none;"></div>
             </form>
-            
+
             <!-- Success message -->
             <div id="success-message" class="success-message" style="display: none;">
                 <p>Your report has been generated successfully! You can now download it.</p>
@@ -58,4 +64,5 @@
 
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
+
 </html>
